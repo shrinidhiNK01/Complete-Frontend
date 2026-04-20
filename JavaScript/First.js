@@ -1,0 +1,1 @@
+alert("Wellcome to My Randi Website")

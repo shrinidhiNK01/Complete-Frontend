@@ -1,0 +1,15 @@
+h1 b{
+    color: red;
+}
+.om> b{
+    /* descendent selector */
+    color: blue;
+}
+.omm + b{
+    /* adjecent selector=>only single adjecent */
+    color: rgb(12, 245, 86);
+}
+.ommm~ b{
+    /* general sibling selector=>all siblings adjecent */
+    color: rgb(174, 219, 13);
+}

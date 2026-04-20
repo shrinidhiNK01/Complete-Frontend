@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{overflow: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* .upendra {
+  width: 200px;
+  height: 200px;
+  background-color: #ff6f61;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* TRANSFORM: scale and rotate */
+  /* transform: scale(1.2) rotate(10deg);
+
+  /* TRANSITION for smooth effect on hover */
+  /* transition: all 0.5s ease-in-out; */
+
+  /* ANIMATION */
+  /* animation-name: magicMove;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+/* } */
+
+/* .upendra:hover {
+  transform: scale(1.5) rotate(360deg) translateX(50px);
+  background-color: #4b0082;
+}
+
+.naanu p {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+} */
+
+/* KEYFRAMES for animation */
+/* @keyframes magicMove {
+  0% {
+    top: 0;
+    left: 0;
+    transform: scale(1) rotate(0deg);
+    background-color: #ff6f61;
+  }
+
+  50% {
+    top: 20px;
+    left: 20px;
+    transform: scale(1.1) rotate(180deg);
+    background-color: #ffb347;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    transform: scale(1) rotate(360deg);
+    background-color: #8a2be2;
+  }
+} */ 
+.container{
+width:100vw;
+height:100vh;
+background-color: aqua;
+display: flex;
+justify-content:center;
+align-items:center;
+
+}
+
+@keyframes rotateright{
+    0%{
+        top:0;
+        left:0;
+    }
+    75%{
+        top:0;
+        left:75vw;
+
+        
+    }
+    100%{
+        top:0;
+        left:100vw;
+        
+    }
+}
+.box{
+    width:200px;
+    height:200px;
+    background-color: chartreuse;
+    padding:70px;
+    border:3px solid black;
+    border-radius:700px;
+transition-duration: 5s;
+transition-property: all;
+transition-timing-function: ease-out;
+transition-delay: 0s;
+
+
+}
+.box:hover{
+    background-color: crimson;
+    /* scale increase the object size ,u can make the object small by 0.5*/
+    /* rotate(-360deg)==>rotate anti-clockwise */
+transform:rotate(360deg) scale(2);
+
+    
+
+    animation-name:rotateright;
+animation-timing-function: ease-in-out;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-fill-mode: forwards;
+animation-delay: 0s;
+animation-play-state: running;
+position: relative;
+transform:rotate(360deg) scale(2);
+/* tilt the object according to ur degree */
+transform: skew(45deg);
+/* moving side wise up down */
+/* x-axis y-axis */
+transform:translate(0, 50px);
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>Adari poyindi</p>
+        </div>
+    </div>
+</body>
+</html>

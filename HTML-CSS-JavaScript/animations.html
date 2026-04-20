@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        } */
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+            color: yellow;
+            overflow: hidden;
+        }
+        .box{
+            width:400px;
+            height:100px;
+            background-color: blue;
+            margin:20px;
+            overflow: hidden;
+            border: 3px solid red;
+            /* border-radius: 700px; */
+            /* box-shadow: 10 20 30 14 rgba(24, 255, 3, 0.5); */
+            /* use position to use top, left, and all */
+            position: relative;
+            /* give a random name for animation-name */
+            animation-name:rightmovement;
+            /* at what time it has to reach end */
+            animation-duration: 2s;
+            /* at what time it has to start when u enter the web page */
+            animation-delay: 1s;
+            /* no of times u want to repeat it */
+            animation-iteration-count: infinite;
+            /* it should return back, expressing direction */
+            animation-direction: alternate;
+            /* speed slows at end */
+            animation-timing-function: ease;
+            /* speed slow to speed */
+            animation-timing-function: ease-in;
+            /* speed to slow */
+            animation-timing-function: ease-out;
+            /* u can give ur own speed */
+            animation-timing-function: cubic-bezier(1, -0.4, 1,1);
+            /* animation-timing-function: ease-in-out; */
+            /* where does it stop */
+            animation-fill-mode: backwards;
+            animation-play-state: running;
+            /* shorthand notation => animation :duration easing-function delay iteration-count direction fill-mode play-state name */
+            animation: 1s ease-in-out 1s infinite alternate backwards running rightmovement;
+
+        
+        
+        }
+        .circle{
+            width:50px;
+            height:50px;
+            border:3px solid greenyellow;
+            border-radius: 700px;
+            background-color: brown;
+            position:relative;
+            animation:10s ease-in-out 1s infinite alternate backwards running circlemovement;
+        
+        }
+        
+        
+        .box1{
+            width:400px;
+            height:100px;
+            background-color: blue;
+            margin:20px;
+            overflow: hidden;
+            border: 3px solid red;
+            position:relative;
+            
+            animation:1s ease-in-out 1s infinite alternate backwards running leftmovement;
+        }
+        .box2{
+            width:400px;
+            height:400px;
+            background-color: blue;
+            /* margin:20px;
+            overflow: hidden; */
+            border: 3px solid rgb(255, 0, 0);
+            /* position:relative; */
+            /* shortend notation for transition: transition-property, transition-duration, transition-timing-function, transition-delay, and transition-behavior. */
+            /* transition: width 4s ease-in-out 1s infinite alternate  running; */
+            transition-duration: 5s;
+            transition-property: all;
+            transition-timing-function: ease-out;
+            transition-delay: 0s;
+            /* transition:margin-right 2s; */
+
+
+
+
+        }
+        .box2:hover{
+            width:1300px;
+            height: 500px;
+            background-color: rgb(0, 255, 55);
+            transform:rotate(360deg) scale(1.5);
+
+
+        }
+            /* Define the keyframes outside of any class */
+            @keyframes rightmovement{
+                /* initial work */
+                from{
+                    top:0;
+                    left:0;
+                }
+                /* destination work */
+                to{
+                    top:0;
+                    left:100vw;
+
+                }
+                
+            }
+            @keyframes leftmovement{
+                from{
+                    top:400px;
+                    left:100vw;
+
+                }
+                to{
+                    top:400px;
+                    
+                    left:0;
+                }
+            }
+
+            @keyframes circlemovement {
+            0%{
+                top:1%;
+                left:5%;
+
+            }
+            25%{
+                top:5%;
+                left:60%;
+
+            }
+            50%{
+                top:20%;
+                left:50%;
+            }
+            75%{
+                top:35%;
+                left:20%;
+            }
+            100%{
+                top:30%;
+                left:80%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Animation  and transition</h1>
+    <p>while doing transition, use hover compalsary</p>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="circle"></div>
+        
+    </div>
+    <br>
+    <br>
+    <h1>Transition</h1>
+    <div class="gauk">
+        <div class="box2"></div>
+    </div>
+    
+</body>
+</html>

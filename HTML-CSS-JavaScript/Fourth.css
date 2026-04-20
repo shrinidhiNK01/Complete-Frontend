@@ -1,0 +1,187 @@
+/* Cascading Style Sheets */
+/* RGBA:- red,blue,green,alphachannel(opacity) =>intensity colur from 0 to 255=>(0,256,7,0.0) it can be any numbers interms of(x,y,z,a) 
+*there are 256*256*256 possible colours
+
+
+HEX Colours:-Hexadecimal colour code =>#RRGGBB =>#FF0000=>red, #00FF00=>green, #0000FF=>blue, #FFFF00=>yellow, #FFFFFF=>white, #000000=>black
+* HSL:- Hue, Saturation, Lightness =>hsl(0,100%,50%)=>red, hsl(120,100%,50%)=>green, hsl(240,100%,50%)=>blue, hsl(60,100%,50%)=>yellow, hsl(0,0%,100%)=>white, hsl(0,0%,0%)=>black
+* HSLA:- Hue, Saturation, Lightness, Alpha =>hsla(0,100%,50%,1)=>red, hsla(120,100%,50%,1)=>green, hsla(240,100%,50%,1)=>blue, hsla(60,100%,50%,1)=>yellow, hsla(0,0%,100%,1)=>white, hsla(0,0%,0%,1)=>black
+p{
+color:blue;
+}
+here p=>selector, color=>property, blue=>value
+for all margin(anything): top left right bottom
+* margin: 10px 20px 30px 40px; => top, right, bottom, left
+
+if u want anything 'n' no of times =>p*4=>here p is element the no of times it will repeat
+*/
+.class{
+    color: rgb(25, 4, 160);
+    background-color: yellowgreen;
+    font-style: unset;
+    height:200px;
+    width: 200px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #eeff00;
+    text-decoration-style: wavy;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    border: 2px solid black;
+    border-radius: 10px;
+    /* distance b/w text and border */
+    padding: 30px;
+    /* distance b/w border and screen */
+    margin: 10px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    font-weight: 100px ;
+    box-shadow: 5px 5px 10px #888888;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+    /* inline won't allow custom width and height and margin and padding , u will be inline to it */
+    display: inline;
+    /* display inline-block will allow custom width and height and margin and padding, but it is inline */
+    display: inline-block;
+    box-sizing: border-box;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    vertical-align: middle;
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 10px;
+    list-style-type: none;
+    list-style-position: inside;
+    list-style-image: url('image.png');
+    list-style: square;
+    list-style: circle;
+    list-style: disc;
+    position: relative;
+    top: 10px;
+   
+  
+    text-align: center;
+    overflow: scroll;
+    /* margin: center; */
+}
+#id{
+    color: rgb(13, 252, 0);
+}
+*{
+    /* this is universal selector for all elements*/
+    color: rgb(25, 0, 255);
+}
+.class:hover{
+    color: yellow;
+    background: #eb0606;
+}
+.class:active{
+    color: red;
+    background: #eb0606;
+}
+.class:focus{
+    color: green;
+    background: #eb0606;
+}
+.class:visited{
+    color: blue;
+    background: #eb0606;
+}
+.class:link{
+    color: blue;
+    background: #eb0606;
+}
+#uhv{
+    /* css size units */
+    /* % depend on parent's size, if parent=80px, then for child 40% of 80px */
+    width:40%;
+    /* view width(vw) and vmax are same */
+    /* 80vw==2048px */
+    width:90vw;
+    /* view height(vh) and vmin are same, it means whatever u r seeing on screen is view*/
+    /* with respect to view it is 30% */
+    /* 1 pixel=1/96 inch  */
+    height:30vh;
+    
+    /* rem and em can change size of font */
+    /* rem=font size of root element */
+    /* ex:- x-height f element font */
+    /* em=font size of element */
+    /* 1rem=16px */
+    /* 1em=16px */
+    /* em is depended on parent, if parent class have font-size:10px ,if child class have font-size:10em, it means 10*10=100pixel larger  */
+    height: 10em;
+    /* rem = relative em , it is relative with root ,means it is by default 16px, font-size:50rem=>16*50=>800px ,it doesn't see parent, it see root*/
+    /* relative unit is best to use */
+    height: 20rem;
+
+    /* 1rem=1em */
+    /* box-shadow:h-offset v-offset blur spred color inset; */
+    box-shadow: #eb0606 4px 4px 4px ;
+    padding: auto;
+    margin: auto;
+    text-shadow: #07f62b 1px 1px 1px ;
+    overflow: unset;
+    opacity: calc(0.5 + 0.5);
+    outline: #03d3d3 2px solid;
+    list-style: square inside;
+    text-overflow: ellipsis;
+    transition: rgb(255, 166, 0) 3s ease 3s;
+    animation-name: blink-text 2s ease 1s infinite alternative both ;
+}
+/* .hari{
+    border: #000000 solid 2px;
+    border-radius: 10px;
+} */
+.harry{
+    border: #000000 solid 2px;
+    border-radius: 10px;
+}
+.lach{
+     /* to bring images and text things continuesly in a line like wikipedia, there comes float */
+    width: 40vw;
+    height: 80vh;
+    /* img left ,other things right */
+    /* float can make objects inline, to make it block elemnt use clear */
+    float:left;
+    /* img right, other things left */
+    float:right;
+    /* if u don't want images on the same place, u can use clear, i will bring a image down with ur defined direction */
+    clear:right;
+    position: sticky;
+    top: 100px;
+}
+.rk{
+    float: left;
+    width: 30vw;
+    height: 80vh;
+    /* flex-direction: row; */
+    /* justify-content: center; */
+}
+.contain{
+    /* here overflow takes place, text go out of border box */
+    border: 4px solid black;
+    width: 500px;
+    height: 500px;
+    /* to solve this Overflow , the methods used*/
+    /* scroll bar */
+    overflow: auto;
+    /* hide the text */
+    overflow: hidden;
+    /* scroll bar will come only when needed */
+    overflow: scroll;
+
+    
+}
+/* Flexbox is an 1d layout (Flexible box) */
+

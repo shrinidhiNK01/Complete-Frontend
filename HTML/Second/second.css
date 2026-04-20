@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(0, 0, 0);
+}
+h1{
+    color:rgb(117, 234, 7);
+    text-align:center;
+}
+h2{
+    color:blue;
+    text-align:center;
+}
+img{
+    float: left;
+}
+p{
+    color: white;
+    font-size: 20px;
+}
+a{
+    color: rgb(255, 0, 0);
+}
+ol>li{
+    color: white;
+    font-size: 20px;
+}
+
+th{
+    color:rgb(255, 0, 0)
+}
+
+td{
+    color: white;
+    font-size:30px;
+}
+label{
+    color:rgb(239, 255, 20)
+}

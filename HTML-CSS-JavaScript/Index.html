@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Canva</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .hover-container {
+          position: relative;
+          display: inline-block;
+            /* cursor: pointer; */
+        }
+    
+        .hover-container iframe {
+          position: absolute;
+          /* top: 120%; places iframe below the text */
+          /* left: 50%; */
+          
+          /* transform: translateX(-50%); */
+          /* width: 400px; */
+          /* height: 225px; */
+          /* border: none; */
+          opacity: 0;
+          pointer-events: none;
+          /* transition: opacity 0.5s ease; */
+          /* z-index: 1; */
+        }
+    
+        .hover-container:hover iframe {
+          opacity: 1;
+          pointer-events: auto;
+        }
+    
+        .hover-text {
+          font-size: 24px;
+          font-weight: bold;
+          
+        }
+      </style>
+</head>
+<body>
+    
+      
+  <div class="hover-container">
+    <div class="hover-text">hello</div>
+    <div><iframe src="https://www.youtube.com/embed/gxxT3Nz-kyc&list=RDgxxT3Nz-kyc&start_radio=1" frameborder="0"></iframe></div>
+  </div>
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple</title>
+    <style>
+        /* flex-items:->order,flex-grow,flex-shrink,flex-basis,flex,align-self
+           flex-container:->display,flex-direction,flex-wrap,justify-content,flex-flow,align-items,align-content */
+        .container{
+            background-color: beige;
+            border: 4px solid black;
+            display: flex;
+            flex-shrink: 10;
+        ;
+            flex: 100px;
+            /* when u squeeze the web page to bring the things and wrrap everything use flexwrap */
+            /* u can reverse-wrap */
+            /* flex-wrap: wrap; */
+            /* when flex-direction is row, then main axis will be horizontal, when flex-direction is column, then main axis will be verticle */
+            /* this justify-content place the things according to the main axis */
+            justify-content: center /* center of main axis*/;
+            align-items: center;/* center of cross axis*/
+            /* flex-wrap: wrap; */
+            width: 100vw;
+            height: 100vh;
+            /* when u wrap, align-item:center won't work */
+            align-items: center;
+            align-items: start;
+            /* when u contract the web page screen, there will be space b/w boxes when u set flex-wrap:wrap , to avoid that spaace use align-content */
+            align-content: space-between;
+            align-content: space-around;
+            align-content: space-evenly;
+            align-content: center;
+            align-content: start;/* this will remove the space b/w the boxes when u wrap*/
+
+            /* justify-content: space-around; */
+        }
+        .item1{
+            /* to change the order of box use order*/
+            order:400;
+            /* here flex-grow will cover complete screen till end */
+            flex-grow: 1;
+            background: skyblue;
+            width: 200px;
+            height: 200px;
+        border: 3px solid rgb(0, 0, 0);}
+        .item2{
+            /* justify-content: ; */
+            
+            /* flex-basis set the dimension  */
+            flex-basis: 100px;/* this will set the dimension of box, but if u set flex-grow then it will take the space according to flex-grow */
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            border: 3px solid rgb(0, 0, 0);}
+        .item3{
+            /* when there is no wrap, if we contract the webpage, everything will shrink evenly, but if we want to shrink this box more than any other then use flex-shrink */
+            /* here 4 means 4x than others shrinking power, for this u have to remove flex-wrap:wrap */
+            flex-shrink: 4;
+            background-color: orange;
+            
+            width: 200px;
+            height: 200px;
+            border: 3px solid rgb(7, 7, 7);}
+        .item4{
+            order:-1;
+            /* align-self for using it for self*/
+            align-self: center;
+            background-color: brown;
+            width: 200px;
+            height: 200px;
+            border: 3px solid rgb(0, 0, 0);}
+        
+        .contain{
+                
+                display: flex;
+                /* flex-direction: row; */
+                justify-content: center;
+                /* justify-content works according to main axis, and align item work according to cross axis */
+                align-items: center;/* center of vericle axis*/
+                width: 100vw;
+                height: 100vh;
+                background-color: rgb(255, 255, 255);
+               }
+        .hello{
+            background-color: rgb(112, 163, 45);
+            width: 400px;
+            height: 600px;
+            border: 3px solid rgb(0, 0, 0);
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Shortend notation==> flex: flex-grow flex-shrink flex-basis
+                                      1        10            100-->
+    <div class="container">
+        <div class="item1">Box1</div>
+        <div class="item2">Box2</div>
+        <div class="item3">Box3</div>
+        <div class="item4">Box4</div>
+
+    </div>
+    <br>
+    <div class="contain">
+        <div class="hello">jhvhkvhkhkvvh</div>
+    </div>
+    
+</body>
+</html>

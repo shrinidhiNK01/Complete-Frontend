@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;}
+        /* media query is used to apply css according to the screen size, it will not work in codepen, use local server or live server in vs code */
+        /* when screen size feels the condition it change it's display as per instructed */
+        .hello{
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255, 0, 0);}
+        .box2{
+            width:200px;
+            height:200px;
+            background: blue;
+            border: 3px;
+            border-style: solid;
+            border-color: black;
+
+        }
+        .box3{
+            width:200px;
+            height:200px;
+            background: rgb(248, 6, 196);
+            border: 3px;
+            border-style: solid;
+            border-color: black;
+
+        }
+        .box4{
+            width:200px;
+            height:200px;
+            background: rgb(7, 150, 95);
+            border: 3px;
+            border-style: solid;
+            border-color: black;
+
+        }
+        .box5{
+            width:200px;
+            height:200px;
+            background: rgb(228, 243, 19);
+            border: 3px;
+            border-style: solid;
+            border-color: black;
+
+        }
+        @media  (min-width:600px){
+            .box{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(102, 255, 0);}
+        }
+        @media (min-width:300px) and (max-width:600px){
+            .box1{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(102, 255, 0);}
+        }
+        @media (max-width:500px){
+            .hello{
+                display: flex;
+                flex-direction: column;
+            }
+            
+        }
+        .contain {
+            /* float:right; */
+  display: flex;
+  flex-direction: row;
+  /* to apply gap between text,img things */
+  gap: 20px; 
+  padding: 20px;
+  /* when main-axis is horizontal, the verticle line will be cross-axis, according to cross axis ,align-items:flex-start  ,it align child items in the start of cross axis */
+  /* align-items: flex-start; */
+}
+
+/* .vic {
+  /* flex: 1; */
+  /* to make it overflow and scroll */
+  /* max-height: 400px; */
+  /* overflow-y: auto; */
+/* } */ 
+
+/* .flex-img {
+  /* width: 300px; */
+  /* height: 400px; */
+  /* object-fit: cover; */
+  /* border-radius: 8px; */
+/* } */
+
+/* Media query: Change to column layout on small screens */
+@media screen and (max-width: 600px) {
+  .contain {
+    display: flex;
+    flex-direction: column;
+    /* align image and text in center */
+    align-items: center;
+  }
+
+  /* .vic {
+    max-height: none;
+    width: 100%;
+  } */
+
+  /* .flex-img {
+    width: 100%;
+    height: auto;
+  } */
+}
+
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <br>
+    <br>
+    <br>
+    <div class="hello">
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <br>
+    <br>
+    <br>
+<br>
+</div>
+<br>
+
+        <div class="contain">
+            <div class="vic">
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla natus officiis perferendis eaque tempora veritatis. Ex quidem dolor facere, eligendi quod eum accusamus doloremque numquam expedita tempora illum saepe unde soluta blanditiis explicabo laudantium optio laboriosam! Deserunt deleniti reprehenderit non esse corrupti molestias nostrum minus quae saepe similique? Modi perspiciatis sit, nostrum ab maiores dolor vero, tenetur doloremque excepturi minus voluptatibus? Nesciunt fugiat maiores esse quo quam minus doloremque inventore qui rerum dolorum, quis soluta eligendi, aliquam atque libero sapiente corporis, ducimus ipsum quos repellendus? Quibusdam expedita est deserunt ab temporibus! Expedita neque fugit porro ut unde earum! Rerum, sit voluptas? Magnam iure tenetur qui beatae impedit ipsa, reprehenderit in quis dolor minima praesentium quidem, hic nemo nam dolore vel omnis. Quod explicabo ullam quia fugiat, magnam reiciendis minus aliquam corrupti quidem laboriosam nulla reprehenderit aut adipisci sint quos magni quam beatae quo vero. Aliquam voluptatibus iure ab quas, impedit quaerat necessitatibus, neque id incidunt ex nesciunt! Laboriosam eaque amet necessitatibus minima? Recusandae commodi quaerat dolorem, est officiis illo illum laudantium quis repellat qui molestiae totam? Eveniet eius dolore quis autem nulla praesentium quaerat quae assumenda at impedit. Nihil excepturi totam hic optio laboriosam dolorum et beatae unde a iure!</p>   
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, dolor consequuntur assumenda animi quos quisquam, quod ipsa cumque nam ab quae velit facilis vero molestias? Eaque quae hic, repellat quidem reiciendis, consequatur dicta laborum qui ea alias excepturi id temporibus impedit illo voluptas ab omnis rem iure quisquam vero aut? Perferendis quasi voluptas consequatur sint minus accusantium explicabo, provident odio, dolorem culpa, similique et animi aperiam voluptatibus! Sint sapiente, deleniti ab rerum nesciunt cum velit vel ipsam perspiciatis unde, illum nostrum saepe quidem corporis vitae! Aperiam repellat velit facilis vel est dolores sunt cumque nobis dolorem quisquam non ea reprehenderit ipsa veniam autem molestias laboriosam delectus, id aut aliquid? Consequatur architecto incidunt a voluptatibus soluta quae animi nemo nulla tenetur possimus in corporis quidem doloribus totam vero maxime cupiditate eius magnam, ex enim ea dicta eaque. Obcaecati, similique. Natus mollitia deleniti praesentium esse similique, accusantium eos itaque quo vel cupiditate, repellendus quis molestiae ex hic dicta fuga doloremque error neque ipsa adipisci rerum voluptatum facere. Facere aliquid quas, laudantium assumenda alias similique libero quibusdam ex laborum modi, omnis sint reiciendis unde aperiam perferendis provident dolorem! Dolore, eveniet, quaerat iure molestiae totam quis, tenetur quisquam deserunt amet doloribus veritatis autem similique?</p>
+            </div>
+                <div >
+                <img src="sh.jpg" alt="" class="flex-img"   style="width: 300px; height: 400px;">
+            </div>
+                </div>
+</body>
+</html>
