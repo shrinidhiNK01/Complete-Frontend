@@ -1,11 +1,22 @@
-div{
-    color:blue;
+.one{
+    color:rgb(85, 255, 0);
     background-color:red;
+    text-align: center;
 }
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=Noto+Sans+Pahawh+Hmong&display=swap');
 
-.hello{
+.one{
   font-family: "Noto Sans Pahawh Hmong", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.two{
+    color: rgb(4, 0, 255);
+    font-size: xx-large;
+    font-style: italic;
+    text-align: justify;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-decoration-thickness: 2px;
 }

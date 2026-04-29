@@ -1,0 +1,45 @@
+Tailwindcss:- Framework to style the webpage by adding classes to the HTML elements faster
+* We can use tailwindcss only in html file
+
+google:- tailwind css:- docs:-play CDN:- copy the script line <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> and paste it in html head section
+
+For Intellisense:-
+=======================
+1)Install Node
+2)npm install -D tailwindcss postcss autoprefixer vite
+3)npx tailwindcss init -p
+4)install tailwind css intellisense extension
+5)add * in content:[*] in tailwind.config.js
+6)add scripts in package.json:- {"start":"vite","build":"vite build"} inside "scripts" section 
+7)create main.css and insert and link
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+8)open terminal and run 
+    npm run start
+9)create index.html and link the main.css
+
+Codes:-
+=======================================================
+Background:- bg-red-500
+
+Text:- text-red-500 ,text-bold,text-italic,text-underline,text-strike-through, text-center, text-left, text-right, text-justify,text-lg,text-md,text-sm
+
+Hover:- hover:bg-red-500 hover:text-white
+
+Font Size:- text-lg, text-xl, text-2xl
+
+margin:- mx-4, my-4, m-4
+
+padding:- px-4, py-4, p-4
+
+border:- border-2 border-red-500
+
+border-radius:- rounded-lg rounded-full
+
+grid:- grid-cols-2 
+
+flex:- flex, inline-flex, flex-col, flex-row, justify-center, justify-between, justify-start, justify-end, items-center, items-start, items-end
+
+font:- font-sans, font-serif, font-monospace ,font-bold,font-italic, text-sm, text-lg, text-xl, text-2xl, text-3xl, text-4xl, text-5xl, text-6xl, text-7xl, text-8xl, text-9xl ,font-medium,font-semibold
+
