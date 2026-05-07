@@ -1,16 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="First.js"></script>
-    <link rel="stylesheet" href="First.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MASTER HTML FILE</title>
+
+<!-- External Scripts -->
+<script src="1.js"></script>
+<script src="2.js"></script>
+<script src="Arrow.js"></script>
+<script src="Dom.js"></script>
+
+<!-- Plotly -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<!-- ML5 + P5 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+<script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+
+<!-- Google Icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<style>
+
+/* LINK STYLES */
+a:visited { color: pink; }
+a:hover { color: red; text-decoration: underline; }
+a:active { color: yellow; }
+a:link { color: rgb(81,0,173); }
+
+/* FLEX */
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:start;
+    width:100vw;
+    height:100vh;
+    background:beige;
+}
+.item1{flex-grow:1;background:skyblue;width:200px;height:200px;}
+.item2{flex-basis:100px;background:blue;width:200px;height:200px;}
+.item3{flex-shrink:4;background:orange;width:200px;height:200px;}
+.item4{order:-1;background:brown;width:200px;height:200px;}
+
+.contain{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100vw;height:100vh;
+}
+.hello{background:green;width:400px;height:600px;}
+
+/* Hover iframe */
+.hover-container{position:relative;}
+.hover-container iframe{opacity:0;position:absolute;}
+.hover-container:hover iframe{opacity:1;}
+
+</style>
 </head>
+
 <body>
-    <h1>This is my first heading</h1>
-    <p>This is my first paragraph</p>
-    <button onclick="alert('Good Fuck')">Fuck Me</button>
-    
+
+<!-- ================= BASIC JS LINK ================= -->
+<a href="#" id="demo">Hello JavaScript</a>
+<div id="id">
+<input id="id" type="text" placeholder="What">
+</div>
+
+<script>
+document.getElementById("id");
+</script>
+
+<hr>
+
+<!-- ================= HTML STRUCTURE PRACTICE ================= -->
+<div>
+<h1>hi <b>hey</b> <b>hey</b> <p><b>hey</b></p></h1>
+<b>hey</b>
+</div>
+
+<div>
+<h1 class="om">hi <b>hey</b> <b>hey</b> <p><b>hey</b></p></h1>
+<b>hey</b>
+</div>
+
+<div>
+<h1 class="omm">hi <b>hey</b> <b>hey</b> <p><b>hey</b></p></h1>
+<b>hey</b><b>hey</b>
+</div>
+
+<div>
+<h1 class="ommm">hi <b>hey</b> <b>hey</b> <p><b>hey</b></p></h1>
+<b>hey</b><b>hey</b>
+</div>
+
+<hr>
+
+<!-- ================= FORMS ================= -->
+<h1><u>Form</u></h1>
+
+<h2>Flipkart</h2>
+<form action="https://www.flipkart.com/search">
+<input type="text" name="q">
+<button>Search in Flipkart</button>
+</form>
+
+<h2>YouTube</h2>
+<form action="https://www.youtube.com/results">
+<input type="text" name="search_query">
+<button>Search in YouTube</button>
+</form>
+
+<!-- ADVANCED INPUTS -->
+<form>
+<input type="checkbox" id="KGF"><label for="KGF">KGF</label><br>
+<input type="color"><br>
+<input type="radio" name="gender">male
+<input type="radio" name="gender">female<br>
+<input type="date"><br>
+<input type="time"><br>
+<input type="email" placeholder="email"><br>
+<input type="number" required><br>
+<input type="file"><br>
+<input type="password"><br>
+<input type="range"><br>
+<input type="search"><br>
+<input type="month"><br>
+<input type="reset"><br>
+<input type="tel"><br>
+</form>
+
+<hr>
+
+<!-- ================= TEXT + DOM ================= -->
+<h1>I am the god</h1>
+<h2>God is great</h2>
+
+<p id="id">Lorem ipsum</p>
+<p class="main">Text1</p>
+<p class="main">Text2</p>
+
+<div class="beautiful">
+<del>deleted</del>
+<strong>strong</strong>
+<em>italic</em>
+</div>
+
+<a href="https://github.com/shrinidhiNK01">GitHub</a>
+
+<hr>
+
+<!-- ================= PLOTLY GRAPH ================= -->
+<div id="myPlot"></div>
+
+<script>
+const xvalue=[],yvalue=[];
+for(let i=0;i<=10;i++){xvalue.push(i);yvalue.push(i);}
+Plotly.newPlot("myPlot",[ {x:xvalue,y:yvalue,mode:"lines"} ],{title:"y=x"});
+</script>
+
+<hr>
+
+<!-- ================= EQUATION PLOT ================= -->
+<input id="equation" value="x*2+17">
+<button onclick='plot("scatter")'>Scatter</button>
+<button onclick='plot("lines")'>Line</button>
+
+<script>
+function plot(type){
+let exp=document.getElementById("equation").value;
+let x=[],y=[];
+for(let i=0;i<=10;i++){x.push(i);y.push(eval(exp));}
+Plotly.newPlot("myPlot",[ {x,y,mode:type=="scatter"?"markers":"lines"} ]);
+}
+</script>
+
+<hr>
+
+<!-- ================= ML5 IMAGE ================= -->
+<h1>Image Classification</h1>
+<div id="myResult">Scanning...</div>
+<img id="myImage" src="Bugatti-Chiron.jpg" width="300">
+
+<script>
+let classifier=ml5.imageClassifier("MobileNet");
+classifier.classify(document.getElementById("myImage"), res=>{
+document.getElementById("myResult").innerText=res[0].label;
+});
+</script>
+
+<hr>
+
+<!-- ================= FLEXBOX ================= -->
+<div class="container">
+<div class="item1">Box1</div>
+<div class="item2">Box2</div>
+<div class="item3">Box3</div>
+<div class="item4">Box4</div>
+</div>
+
+<div class="contain">
+<div class="hello">jhvhkvhkhkvvh</div>
+</div>
+
+<hr>
+
+<!-- ================= YOUTUBE EMBED ================= -->
+<iframe width="300" src="https://www.youtube.com/embed/nu_pCVPKzTk"></iframe>
+<iframe width="300" src="https://www.youtube.com/embed/zf0LfGlFBO8"></iframe>
+
+<hr>
+
+<!-- ================= TABLE ================= -->
+<table border="1">
+<tr><th>Name</th><th>Class</th></tr>
+<tr><td>shrinidhi</td><td>10th</td></tr>
+<tr><td>snk</td><td>11th</td></tr>
+</table>
+
+<hr>
+
+<!-- ================= HOVER VIDEO ================= -->
+<div class="hover-container">
+<div class="hover-text">hello</div>
+<iframe src="https://www.youtube.com/embed/gxxT3Nz-kyc"></iframe>
+</div>
+
+<hr>
+
+<!-- ================= COUNTER ================= -->
+<h1>People Entered</h1>
+<h2 id="count-rel">0</h2>
+
+<script>
+document.getElementById("count-rel").innerText=5;
+</script>
+
 </body>
 </html>
