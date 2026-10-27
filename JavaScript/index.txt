@@ -1,0 +1,18 @@
+alert("Wellcome to My Website")
+
+Variables:-
+================
+can use var, let, const to define variables
+cannot use speacial keywords
+cannot start with a number
+NUMBERS CAN BE IN MIDDLE
+Cannot use any speacial keywords other than $_
+
+Naming Conventions
+============================================
+camelCase  -  cartQuantity
+PascalCase  -  CartQuantity
+
+
+Ecmascript is a std JS 
+JS is built to manipulate Browser

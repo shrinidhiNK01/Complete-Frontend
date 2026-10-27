@@ -1,0 +1,2 @@
+1)keep a favicon always on ur weapp => favicon.io
+2)u can make ur own favicon = favicon.ico generator

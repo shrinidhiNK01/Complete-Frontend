@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Arial, sans-serif;
+  background: #101827;
+  color: white;
+}
+
+.page {
+  width: min(900px, 100%);
+  padding: 32px;
+}
+
+.button {
+  border: 0;
+  padding: 14px 22px;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: #062033;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-4px) scale(1.03);
+  background: #a7f3d0;
+}
+
+.loader {
+  width: 56px;
+  height: 56px;
+  margin: 40px 0;
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #38bdf8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scene {
+  width: 220px;
+  height: 140px;
+  perspective: 900px;
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.scene:hover .flip-card {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.front {
+  background: #2563eb;
+}
+
+.back {
+  background: #16a34a;
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+

@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #172033;
+  background: #eef2f7;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  padding: 16px 24px;
+  background: #172033;
+  color: white;
+  z-index: 10;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.box {
+  width: 320px;
+  padding: 24px;
+  border: 6px solid #2563eb;
+  margin: 30px;
+  background: white;
+}
+
+.display-demo {
+  padding: 24px;
+  background: white;
+  border-radius: 8px;
+}
+
+.inline {
+  background: #fde68a;
+  padding: 8px;
+}
+
+.block {
+  display: block;
+  margin: 16px 0;
+  padding: 16px;
+  background: #bfdbfe;
+}
+
+.inline-block {
+  display: inline-block;
+  width: 150px;
+  padding: 16px;
+  background: #bbf7d0;
+}
+
+.position-parent {
+  position: relative;
+  min-height: 140px;
+  margin-top: 24px;
+  padding: 24px;
+  background: white;
+  border: 2px dashed #94a3b8;
+}
+
+.absolute-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px 12px;
+  background: #dc2626;
+  color: white;
+  border-radius: 999px;
+}
+
